@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-  <title>编号激活</title>
-  <style>
-    body {
-      background: black;
-      color: white;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    h2 {
-      font-size: 28px;
-      margin-bottom: 30px;
-    }
-    form {
-      max-width: 300px;
-      margin: auto;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      font-size: 16px;
-      border: none;
-      border-radius: 4px;
-    }
-    button {
-      background: #33aaff;
-      color: white;
-      padding: 12px;
-      font-size: 16px;
-      border: none;
-      border-radius: 4px;
-      width: 100%;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <h2>激活你的编号</h2>
-  <form>
-    <input type="text" placeholder="编号：" required />
-    <input type="text" placeholder="激活口令：" required />
-    <button type="submit">激活</button>
-  </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>编号激活页</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: black;
+        color: white;
+        font-family: "Helvetica Neue", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+      input {
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 16px;
+        width: 260px;
+      }
+      .button {
+        font-size: 20px;
+        border: 1px solid white;
+        padding: 10px 30px;
+        background: none;
+        color: white;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>编号激活通道</h2>
+    <form action="">
+      <input type="text" placeholder="输入编号" required />
+      <br />
+      <input type="text" placeholder="输入口令" required />
+      <br />
+      <button type="submit" class="button">开启你的剧本</button>
+    </form>
+  </body>
 </html>
