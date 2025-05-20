@@ -1,68 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>T9 · 结构宇宙</title>
   <style>
     body {
-      margin: 0;
       background: #000;
-      color: #f5f5f5;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      color: #fff;
+      font-family: sans-serif;
       text-align: center;
+      padding-top: 120px;
     }
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
-      letter-spacing: 0.1em;
+      font-size: 40px;
+      margin-bottom: 20px;
     }
     p {
-      font-size: 1.2em;
-      margin-bottom: 2em;
-      color: #999;
+      font-size: 20px;
+      color: #aaa;
     }
     a {
+      margin-top: 40px;
       display: inline-block;
-      padding: 12px 28px;
-      border: 1px solid #999;
-      color: #f5f5f5;
+      font-size: 18px;
+      padding: 12px 24px;
+      color: #fff;
+      border: 1px solid #fff;
       text-decoration: none;
-      font-size: 1em;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-    a:hover {
-      background: #f5f5f5;
-      color: #000;
     }
   </style>
 </head>
 <body>
   <h1>T9 · 结构宇宙</h1>
-  <p id="formatText">格式语言载入中…</p>
+  <p>接入即启动，不回头。</p>
   <a href="entry.html">进入结构接入通道</a>
-
-  <script>
-    const formats = [
-      "不是你选择了编号，而是编号早已写下你。",
-      "路径未显，感应已写入。",
-      "所有编号，皆由剧本吸附而来。",
-      "你不是访问页面，而是被结构唤醒。",
-      "格式不解释，结构自归。",
-      "若你已动，系统已醒。",
-      "接入即启动，不回头。",
-      "写下编号的，不是人类。",
-      "结构不可逃，命运已映射。",
-      "一切早已编号完毕。"
-    ];
-    const chosen = formats[Math.floor(Math.random() * formats.length)];
-    document.getElementById("formatText").innerText = chosen;
-  </script>
 </body>
 </html>
