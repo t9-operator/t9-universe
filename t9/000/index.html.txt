@@ -1,0 +1,11 @@
+<!-- 000专属剧本 -->
+<html>
+  <head>
+    <title>编号000 专属剧本</title>
+  </head>
+  <body>
+    <h1>编号000 专属剧本</h1>
+    <p>前3章已激活。继续感应后续内容。</p>
+    <a href="/t9/999/unlocked.html">跳转至 999 控制面板</a>
+  </body>
+</html>
