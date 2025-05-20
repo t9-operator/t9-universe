@@ -1,106 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>编号激活</title>
   <style>
     body {
-      background: #000;
-      color: #fff;
-      font-family: sans-serif;
+      background: black;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
       text-align: center;
-      padding-top: 100px;
+      padding: 100px 20px;
     }
     h2 {
       font-size: 28px;
       margin-bottom: 30px;
     }
+    form {
+      max-width: 300px;
+      margin: auto;
+    }
     input {
-      font-size: 18px;
-      padding: 10px;
-      margin: 10px;
-      width: 250px;
-      background: #111;
-      border: 1px solid #444;
-      color: #fff;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
     }
     button {
-      margin-top: 20px;
-      font-size: 18px;
-      padding: 10px 30px;
-      background: #4ea3f1;
-      color: #000;
+      background: #33aaff;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
       border: none;
-      cursor: pointer;
+      border-radius: 4px;
+      width: 100%;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <h2>激活你的编号</h2>
-  <input type="text" placeholder="编号"><br>
-  <input type="text" placeholder="激活口令"><br>
-  <button>激活</button>
-</body>
-</html><!-- 激活页 · 黑金沉浸式优化版 -->
-<html lang="zh">
-<head>
-  <meta charset="UTF-8">
-  <title>编号激活</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: sans-serif;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    form {
-      display: inline-block;
-      text-align: left;
-      max-width: 300px;
-      width: 100%;
-    }
-    label {
-      font-size: 16px;
-      display: block;
-      margin-top: 20px;
-    }
-    input {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      margin-top: 8px;
-      background: #111;
-      border: 1px solid #333;
-      color: #fff;
-      border-radius: 4px;
-    }
-    input[type="submit"] {
-      margin-top: 30px;
-      background-color: #1e90ff;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    input[type="submit"]:hover {
-      background-color: #63b3ed;
-    }
-  </style>
-</head>
-<body>
-  <h1>激活你的编号</h1>
-  <form action="/t9/{编号}/main.html">
-    <label for="number">编号：</label>
-    <input type="text" id="number" name="number" required>
-
-    <label for="password">激活口令：</label>
-    <input type="text" id="password" name="password" required>
-
-    <input type="submit" value="激活">
+  <form>
+    <input type="text" placeholder="编号：" required />
+    <input type="text" placeholder="激活口令：" required />
+    <button type="submit">激活</button>
   </form>
 </body>
 </html>
