@@ -6,7 +6,7 @@
   <body>
     <h1>编号999 控制面板</h1>
     <p>输入编号跳转至该编号的剧本路径。</p>
-    <form action="/t9/{编号}/main.html">
+    <form action="t9/{编号}/main.html">
       <label for="number">输入编号：</label>
       <input type="text" id="number" name="number" required><br><br>
       <input type="submit" value="跳转至编号路径">
