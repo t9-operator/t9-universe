@@ -1,50 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>编号激活页</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background: black;
-        color: white;
-        font-family: "Helvetica Neue", sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        text-align: center;
-      }
-      input {
-        padding: 10px;
-        margin: 10px 0;
-        font-size: 16px;
-        width: 260px;
-      }
-      .button {
-        font-size: 20px;
-        border: 1px solid white;
-        padding: 10px 30px;
-        background: none;
-        color: white;
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <h2>编号激活通道</h2>
-    <form action="">
-      <input type="text" placeholder="输入编号" required />
-      <br />
-      <input type="text" placeholder="输入口令" required />
-      <br />
-      <button type="submit" class="button">开启你的剧本</button>
-    </form>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>编号激活</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+    }
+    label, input, button {
+      font-size: 1.1rem;
+      margin: 0.5rem;
+    }
+    input {
+      padding: 0.6rem;
+      border: none;
+      border-radius: 4px;
+    }
+    button {
+      padding: 0.6rem 1.5rem;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <label for="number">编号：</label>
+  <input type="text" id="number" name="number" required />
+  <label for="password">激活口令：</label>
+  <input type="text" id="password" name="password" required />
+  <button onclick="alert('激活成功，跳转中…')">开启剧本</button>
+</body>
 </html>
