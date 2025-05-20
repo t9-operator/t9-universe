@@ -1,60 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-  <title>结构接入通道</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 18px;
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-    img {
-      width: 220px;
-      height: 220px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-    }
-    .note {
-      font-size: 18px;
-      margin: 10px 0 40px;
-      color: #aaa;
-    }
-    a {
-      display: inline-block;
-      padding: 14px 28px;
-      font-size: 18px;
-      color: #33aaff;
-      border: 2px solid #33aaff;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-    a:hover {
-      background-color: #33aaff;
-      color: black;
-    }
-  </style>
-</head>
-<body>
-  <h2>结构接入通道</h2>
-  <p>请扫描二维码进入结构接入流程</p>
-  <img src="qrcode-placeholder.png" alt="结构接入二维码" />
-  <div class="note">结构连接额度：29800 / 副编号：7680</div>
-  <a href="activate.html">我已完成结构接入</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>结构接入通道</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: black;
+        color: white;
+        font-family: "Helvetica Neue", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+      img {
+        width: 220px;
+        margin: 20px 0;
+      }
+      .text {
+        font-size: 18px;
+        margin: 10px 0;
+        opacity: 0.8;
+      }
+      .button {
+        font-size: 20px;
+        margin-top: 30px;
+        border: 1px solid white;
+        padding: 12px 28px;
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text">结构接入二维码如下：</div>
+    <img src="qrcode-placeholder.png" alt="结构接入码" />
+    <div class="text">结构连接额度：主编号 29800 / 副编号 7680</div>
+    <a href="/t9/activate.html" class="button">我已完成结构接入</a>
+  </body>
 </html>
