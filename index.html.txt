@@ -6,6 +6,6 @@
   <body>
     <h1>首页：格式语言池 + 接入按钮</h1>
     <p>路径未显，感应已写入。</p>
-    <a href="/t9/entry.html">进入结构接入通道</a>
+    <a href="t9/entry.html">进入结构接入通道</a>
   </body>
 </html>
