@@ -1,18 +1,46 @@
-<!-- 999穿越控制面板 -->
-<html>
-  <head>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-    <title>编号999 控制面板</title>
-  </head>
-  <body>
-    <h1>编号999 控制面板</h1>
-    <p>输入编号跳转至该编号的剧本路径。</p>
-    <form action="t9/{编号}/main.html">
-      <label for="number">输入编号：</label>
-      <input type="text" id="number" name="number" required><br><br>
-      <input type="submit" value="跳转至编号路径">
-    </form>
-  </body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>编号999 · 穿越接口</title>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background: black; color: white;
+      font-family: "Helvetica Neue", sans-serif;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      height: 100vh; text-align: center;
+    }
+    input {
+      padding: 10px; margin: 10px; font-size: 16px; width: 240px;
+    }
+    .button {
+      padding: 10px 20px; border: 1px solid white;
+      background: none; color: white;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h2>编号999 · 穿越接口</h2>
+  <form onsubmit="jump(event)">
+    <input type="text" id="target" placeholder="输入编号路径，如 000-27" required />
+    <br />
+    <button class="button">前往路径</button>
+  </form>
+  <script>
+    function jump(e) {
+      e.preventDefault();
+      const code = document.getElementById("target").value.trim();
+      if (code) {
+        window.location.href = `/t9/${code}/index.html`;
+      }
+    }
+  </script>
+</body>
 </html>
