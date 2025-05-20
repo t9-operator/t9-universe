@@ -1,16 +1,63 @@
-<!-- 激活页 -->
-<html>
-  <head>
-    <title>编号激活</title>
-  </head>
-  <body>
-    <h1>激活你的编号</h1>
-    <form action="/t9/{编号}/main.html">
-      <label for="number">编号：</label>
-      <input type="text" id="number" name="number" required><br><br>
-      <label for="password">激活口令：</label>
-      <input type="text" id="password" name="password" required><br><br>
-      <input type="submit" value="激活">
-    </form>
-  </body>
+<!-- 激活页 · 黑金沉浸式优化版 -->
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>编号激活</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    form {
+      display: inline-block;
+      text-align: left;
+      max-width: 300px;
+      width: 100%;
+    }
+    label {
+      font-size: 16px;
+      display: block;
+      margin-top: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 8px;
+      background: #111;
+      border: 1px solid #333;
+      color: #fff;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      margin-top: 30px;
+      background-color: #1e90ff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    input[type="submit"]:hover {
+      background-color: #63b3ed;
+    }
+  </style>
+</head>
+<body>
+  <h1>激活你的编号</h1>
+  <form action="/t9/{编号}/main.html">
+    <label for="number">编号：</label>
+    <input type="text" id="number" name="number" required>
+
+    <label for="password">激活口令：</label>
+    <input type="text" id="password" name="password" required>
+
+    <input type="submit" value="激活">
+  </form>
+</body>
 </html>
