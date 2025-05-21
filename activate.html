@@ -1,66 +1,59 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <title>编号激活</title>
+  <title>激活编号</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
       background-color: #000;
       color: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Helvetica Neue", sans-serif;
+      text-align: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      text-align: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 24px;
-      font-weight: bold;
-    }
-    form {
-      width: 80%;
-      max-width: 320px;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 12px;
-      border: none;
-      background-color: #111;
-      color: #fff;
+    input {
+      padding: 10px;
       font-size: 16px;
-      box-sizing: border-box;
+      margin: 10px;
+      width: 250px;
     }
     button {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      background-color: #007bff;
-      border: none;
+      padding: 10px 30px;
+      font-size: 18px;
+      border: 1px solid #fff;
+      background-color: transparent;
       color: #fff;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
   <h1>激活你的编号</h1>
-  <form action="/t9/000/main.html" method="get">
-    <input type="text" name="编号" placeholder="编号：" required />
-    <input type="text" name="口令" placeholder="激活口令：" required />
-    <button type="submit">激活</button>
-  </form>
+  <input type="text" id="code" placeholder="编号（如 000）" required>
+  <input type="text" id="key" placeholder="激活口令" required>
+  <button onclick="activate()">激活</button>
+
+  <script>
+    function activate() {
+      const code = document.getElementById("code").value.trim();
+      const key = document.getElementById("key").value.trim();
+
+      if (code && key) {
+        // 示例默认跳转编号路径
+        window.location.href = `/t9/${code}/main.html`;
+      } else {
+        alert("请输入编号和口令");
+      }
+    }
+  </script>
 </body>
 </html>
