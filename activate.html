@@ -1,49 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>编号激活</title>
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+    html, body {
       height: 100%;
+      width: 100%;
       background-color: #000;
       color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Helvetica Neue', sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
     }
-    label, input, button {
-      font-size: 1.1rem;
-      margin: 0.5rem;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+      color: #aaa;
+      margin-bottom: 2rem;
     }
     input {
-      padding: 0.6rem;
+      width: 80%;
+      max-width: 300px;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
       border: none;
-      border-radius: 4px;
+      border-radius: 5px;
+      font-size: 1rem;
     }
     button {
-      padding: 0.6rem 1.5rem;
-      border: 1px solid #fff;
-      background: transparent;
-      color: #fff;
-      border-radius: 4px;
+      margin-top: 1.5rem;
+      padding: 0.8rem 2.5rem;
+      font-size: 1rem;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ddd;
     }
   </style>
 </head>
 <body>
-  <label for="number">编号：</label>
-  <input type="text" id="number" name="number" required />
-  <label for="password">激活口令：</label>
-  <input type="text" id="password" name="password" required />
-  <button onclick="alert('激活成功，跳转中…')">开启剧本</button>
+  <h1>激活你的编号</h1>
+  <p>编号和口令输入完成后，即可开启专属剧本</p>
+  <input type="text" id="code" placeholder="请输入编号">
+  <input type="text" id="token" placeholder="请输入激活口令">
+  <button onclick="activate()">激活</button>
+
+  <script>
+    function activate() {
+      const code = document.getElementById('code').value.trim()
+      const token = document.getElementById('token').value.trim()
+      if (!code || !token) {
+        alert('请输入完整信息')
+        return
+      }
+      window.location.href = `/t9/${code}/main`
+    }
+  </script>
 </body>
 </html>
