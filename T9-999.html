@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>T9-999 穿越器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color:black;color:gold;font-family:sans-serif;padding:2em;">
+    <h1>编号 T9-999</h1>
+    <p>你拥有所有路径的读取权限。</p>
+    <input type="text" placeholder="输入编号，如 003" id="goNum" style="padding:0.5em;margin-top:1em;">
+    <button onclick="goTo()" style="padding:0.5em;margin-left:1em;">跳转</button>
+    <script>
+        function goTo() {
+            var num = document.getElementById('goNum').value.padStart(3, '0');
+            window.location.href = 'T9-' + num + '.html';
+        }
+    </script>
+</body>
+</html>
