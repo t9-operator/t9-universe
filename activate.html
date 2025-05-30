@@ -1,1 +1,70 @@
-<html><body><h2>Activate Your Number</h2></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>输入格式口令</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: "Helvetica Neue", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    input {
+      padding: 12px;
+      font-size: 1em;
+      margin-bottom: 20px;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ccc;
+    }
+    p {
+      margin: 20px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h2>请输入你收到的八字口令</h2>
+  <input type="text" id="codeInput" placeholder="请输入格式口令" />
+  <button onclick="validateCode()">确认接入</button>
+  <p id="result"></p>
+
+  <script>
+    function validateCode() {
+      const code = document.getElementById("codeInput").value.trim();
+      const validCodes = [
+        "风止水静知而不语",
+        "暗中显影不言而动",
+        "栉风沐雨", // 000专属口令
+        "ARC-UNSEAL-T9"
+      ];
+
+      if (validCodes.some(c => code.includes(c) || c.includes(code))) {
+        window.location.href = "./t9/000/main.html"; // 可更改为自动分配路径
+      } else {
+        document.getElementById("result").innerText = "口令无效，请确认你输入的格式";
+      }
+    }
+  </script>
+</body>
+</html>
