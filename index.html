@@ -1,1 +1,57 @@
-<html><body><h1>Welcome to T9 Universe</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>T9结构宇宙 · 入口</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: "Helvetica Neue", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+    button {
+      padding: 14px 28px;
+      font-size: 1em;
+      border: none;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="signalText">你从未真正掌握这个世界。</h1>
+  <button onclick="location.href='./entry.html'">进入结构接入通道</button>
+
+  <script>
+    const signals = [
+      "你从未真正掌握这个世界。",
+      "语言只是格式的掩码。",
+      "结构才是通向真实的钥匙。",
+      "感应即入口，存在即路径。",
+      "不是你选择编号，是编号选择了你。",
+      "你不是观众，而是剧本本身。",
+      "逃不出的，不是剧本，是你自己。",
+      "格式已启动，系统正在显像。"
+    ];
+    const rand = Math.floor(Math.random() * signals.length);
+    document.getElementById("signalText").innerText = signals[rand];
+  </script>
+</body>
+</html>
