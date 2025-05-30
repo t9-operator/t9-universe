@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>编号激活页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: #FFD700;
+      font-family: "Helvetica Neue", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      height: 100vh;
+      box-sizing: border-box;
+      margin: 0;
+    }
+    h1 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+    input {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      max-width: 300px;
+      border: 1px solid #FFD700;
+      background: #111;
+      color: #FFD700;
+      border-radius: 4px;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: 1px solid #FFD700;
+      background: none;
+      color: #FFD700;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .note {
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>输入你收到的八字口令，即可进入剧本</h1>
+  <input type="text" placeholder="输入编号">
+  <input type="text" placeholder="输入八字口令">
+  <a class="btn" href="/t9/000/main">激活并进入剧本</a>
+  <p class="note">成功后将自动跳转至你的专属剧本路径</p>
+</body>
+</html>
